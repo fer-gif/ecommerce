@@ -24,6 +24,8 @@ class EquipoModel
         return $productos;
     }
 
+    
+
 
     public function getProducto($id){
         $conexion = $this->connection->getConnection();
@@ -31,9 +33,9 @@ class EquipoModel
         $sentence = $conexion->prepare("SELECT * FROM productos
                                         WHERE id_productos=?
                                         ");
-         $sentence->execute(array($id));
-         $producto = $sentence->fetch(PDO::FETCH_ASSOC);
-         return $producto;
+        $sentence->execute(array($id));
+        $producto = $sentence->fetch(PDO::FETCH_ASSOC);
+        return $producto;
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 class Conexion
 {
-    private $host = "localhost";
+    private $host = "localhost:4306";
     private $db = "db_eccomerce";
     private $user = "root";
     private $pass = "";
